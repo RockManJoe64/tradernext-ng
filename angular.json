@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "71689e2a-c94e-41bb-882b-1f77ae7cf85b"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tradernext-ui": {
+    "tradernext-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tradernext-ui",
+            "outputPath": "dist/tradernext-ng",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "tradernext-ui:build"
+            "browserTarget": "tradernext-ng:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "tradernext-ui:build:production"
+              "browserTarget": "tradernext-ng:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tradernext-ui:build"
+            "browserTarget": "tradernext-ng:build"
           }
         },
         "test": {
@@ -116,16 +119,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "tradernext-ui:serve"
+            "devServerTarget": "tradernext-ng:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "tradernext-ui:serve:production"
+              "devServerTarget": "tradernext-ng:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "tradernext-ui"
+  "defaultProject": "tradernext-ng"
 }
